@@ -20,6 +20,7 @@
 
     <modules>
         <module>jbot</module>
+        <module>jbot-example</module>
     </modules>
 
     <developers>

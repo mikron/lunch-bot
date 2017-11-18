@@ -84,7 +84,7 @@ public class SlackDao {
             httpMessageConverters.add(jsonConverter);
             restTemplate.setMessageConverters(httpMessageConverters);
 
-            ResponseEntity<RTM> response = restTemplate.getForEntity(rtmUrl, RTM.class, slackToken);
+            /*ResponseEntity<RTM> response = restTemplate.getForEntity(rtmUrl, RTM.class, slackToken);
             if (response.getBody() != null) {
                 rtm.setWebSocketUrl(response.getBody().getWebSocketUrl());
                 rtm.setDmChannels(response.getBody().getDmChannels());
@@ -93,7 +93,7 @@ public class SlackDao {
                 logger.debug("RTM connection successful. WebSocket URL: {}", rtm.getWebSocketUrl());
             } else {
                 logger.debug("RTM response invalid. Response: {}", response);
-            }
+            }*/
         } catch (RestClientException e) {
             logger.error("RTM connection error. Exception: {}", e.getMessage());
         }
